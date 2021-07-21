@@ -4,37 +4,39 @@
   background-color: rgb(50, 167, 145);
   justify-content: space-between;
   align-items: center;
-  }
-  .header h1 {
-  order: 2;
-  }
-  .trybewarts-login{
-    display:flex;
-    order: 3;
-  }
+}
 
-  form {
-    min-width: 675px;
+.header h1 {
+  order: 2;
+}
+
+.trybewarts-login {
+  display: flex;
+  order: 3;
+}
+
+form {
+  min-width: 675px;
 }
 
 /* requisito 7 */
 #trybewarts-forms-logo {
-    height: 500px;
-    width: auto;
+  height: 500px;
+  width: auto;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 footer {
   display: flex;
   text-align: center;
-  padding: 50px 0px;
+  padding: 50px 0;
   background-color: black;
   width: 100%;
   color: white;
