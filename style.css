@@ -13,3 +13,31 @@
     order: 3;
   }
 
+  form {
+    width: 675px;
+}
+
+/* requisito 7 */
+#trybewarts-forms-logo {
+    height: 500px;
+    width: auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    padding: 50px 0px;
+    background-color: black;
+}
+footer p {
+    width: 100%;
+    color: white;
+}
