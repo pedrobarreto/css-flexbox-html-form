@@ -11,7 +11,7 @@ function formSubmit(event) {
 logarButton.addEventListener('click', formSubmit);
 
 function trybeRating() {
-  let labelRate = document.querySelector('#trybe-rating');
+  let labelRate = document.querySelector('#label-rate');
   for ( i=0; i < 10; i += 1) {
   let createElement = document.createElement('input')  
   labelRate.appendChild(createElement).innerText = [i];
