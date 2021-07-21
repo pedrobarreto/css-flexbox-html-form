@@ -15,3 +15,14 @@ form {
 .flex-column {
     flex-direction: column;
 }
+
+footer {
+    display: flex;
+    text-align: center;
+    padding: 50px 0px;
+    background-color: black;
+}
+footer p {
+    width: 100%;
+    color: white;
+}
