@@ -8,3 +8,10 @@ form {
     width: auto;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
