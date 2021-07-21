@@ -1,17 +1,5 @@
-/* requisito 5 */
-
-.display-flex {
-    display: flex;
-}
-
 form {
     width: 675px;
-}
-
-/* requisito 6 */
-
-.flex-dir-column {
-    flex-direction: column;
 }
 
 /* requisito 7 */
@@ -19,3 +7,4 @@ form {
     height: 500px;
     width: auto;
 }
+
