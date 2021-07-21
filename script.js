@@ -25,13 +25,16 @@ function trybeRating() {
   }
   
   // requisito 18
-const submitBtn = document.getElementById('submit-btn');
-submitBtn.addEventListener('click', (event) => {
   const agree = document.getElementById('agreement');
-  if (!agree.checked) {
-    event.preventDefault();
-  }
-});
+  const submitBtn = document.getElementById('submit-btn');
+  agree.addEventListener('change', () => {
+    if(agree.checked) {
+      submitBtn.disabled = false;
+    }
+    else {
+      submitBtn.disabled = true;
+    }
+  })
 
   window.onload = function() {
     trybeRating();
