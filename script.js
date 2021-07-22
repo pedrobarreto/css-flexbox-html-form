@@ -53,6 +53,13 @@ textArea.addEventListener('input', () => {
 });
 
 // requisito 21
+function subjectPrint(element) {
+  const support = [];
+  for (let i = 0; i < element.length; i += 1) {
+    support.push(element[i].value);
+  }
+  return support;
+}
 function createDiv() {
   const main = document.querySelector('main');
   const div = document.createElement('div');
@@ -68,9 +75,9 @@ function constructorDiv(inputs, names, parentDiv) {
       parentDiv.appendChild(inputDiv);
     } else if (idx === 4) {
       const array = subjectPrint(element);
-      const texto = `${names[idx]}:`;
-      divMaterias.innerText = texto;
-      parentDiv.appendChild(divMaterias);
+      const texto = `${names[idx]}: ${array.join(', ')}`;
+      inputDiv.innerText = texto;
+      parentDiv.appendChild(inputDiv);
     } else {
       const texto = `${names[idx]}: ${element.value}`;
       inputDiv.innerText = texto;
