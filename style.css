@@ -47,6 +47,7 @@ main form {
 
 input {
   margin: 5px;
+  max-width: 90%;
 }
 
 label {

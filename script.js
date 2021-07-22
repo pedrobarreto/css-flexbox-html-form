@@ -60,28 +60,23 @@ function subjectPrint(element) {
   }
   return support;
 }
-function createDiv() {
-  const main = document.querySelector('main');
-  const div = document.createElement('div');
-  div.id = 'respostas';
-  main.prepend(div);
-}
-function constructorDiv(inputs, names, parentDiv) {
+
+function constructorDiv(inputs, names, form) {
   inputs.forEach((element, idx) => {
     const inputDiv = document.createElement('div');
     if (idx === 0) {
       const texto = `${names[idx]}: ${element}`;
       inputDiv.innerText = texto;
-      parentDiv.appendChild(inputDiv);
+      form.appendChild(inputDiv);
     } else if (idx === 4) {
       const array = subjectPrint(element);
       const texto = `${names[idx]}: ${array.join(', ')}`;
       inputDiv.innerText = texto;
-      parentDiv.appendChild(inputDiv);
+      form.appendChild(inputDiv);
     } else {
       const texto = `${names[idx]}: ${element.value}`;
       inputDiv.innerText = texto;
-      parentDiv.appendChild(inputDiv);
+      form.appendChild(inputDiv);
     }
   });
 }
@@ -100,7 +95,6 @@ submitBtn.addEventListener('click', (e) => {
   const array = [fullName, email, house.options[house.selectedIndex], family, subject, rate, obs];
   const names = ['Nome', 'Email', 'Casa', 'Família', 'Matérias', 'Avaliação', 'Observações'];
   form.innerHTML = '';
-  createDiv();
   constructorDiv(array, names, form);
 });
 
