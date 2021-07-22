@@ -1,9 +1,18 @@
 body {
   margin: 0;
+  background-color: whitesmoke;
 }
 
 header {
   padding: 15px 10px;
+}
+
+header h1 {
+  font-family: lora, serif;
+  font-weight: 600;
+  color: white;
+  font-size: 50px;
+  user-select: none;
 }
 
 .header {
@@ -20,6 +29,11 @@ header {
 
 .trybewarts-login {
   display: flex;
+  align-items: center;
+}
+
+.trybewarts-login button {
+  height: 38px;
 }
 
 input {
@@ -28,6 +42,10 @@ input {
 
 main form {
   min-width: 675px;
+}
+
+label {
+  margin-top: 5px;
 }
 
 .header form {
@@ -55,4 +73,5 @@ footer {
   background-color: black;
   width: 100%;
   color: white;
+  font-family: lora, serif;
 }

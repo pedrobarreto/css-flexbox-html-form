@@ -15,12 +15,16 @@ function trybeRating() {
   for (let i = 1; i <= 10; i += 1) {
     const createLabel = document.createElement('label');
     const createElement = document.createElement('input');
-    labelRate.appendChild(createElement).type = 'radio';
-    labelRate.appendChild(createElement).name = 'rate';
-    labelRate.appendChild(createElement).value = [i];
-    labelRate.appendChild(createElement).id = [i];
+    createLabel.className = 'form-check-label';
+    createElement.className = 'form-check-input';
+    createElement.type = 'radio';
+    createElement.name = 'rate';
+    createElement.value = [i];
+    createElement.id = [i];
     createLabel.for = [i];
-    labelRate.appendChild(createLabel).innerText = [i];
+    createLabel.innerText = i;
+    createLabel.prepend(createElement);
+    labelRate.appendChild(createLabel);
   }
 }
 
@@ -41,6 +45,11 @@ const counter = document.querySelector('#counter');
 textArea.addEventListener('input', () => {
   const contador = 500 - textArea.value.length;
   counter.innerText = contador;
+  if (contador < 100) {
+    counter.style.color = 'red';
+  } else {
+    counter.style.color = 'black';
+  }
 });
 
 window.onload = () => {
