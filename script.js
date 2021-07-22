@@ -52,6 +52,51 @@ textArea.addEventListener('input', () => {
   }
 });
 
+// requisito 21
+function createDiv() {
+  const main = document.querySelector('main');
+  const div = document.createElement('div');
+  div.id = 'respostas';
+  main.prepend(div);
+}
+function constructorDiv(inputs, names, parentDiv) {
+  inputs.forEach((element, idx) => {
+    const inputDiv = document.createElement('div');
+    if (idx === 0) {
+      const texto = `${names[idx]}: ${element}`;
+      inputDiv.innerText = texto;
+      parentDiv.appendChild(inputDiv);
+    } else if (idx === 4) {
+      const array = subjectPrint(element);
+      const texto = `${names[idx]}:`;
+      divMaterias.innerText = texto;
+      parentDiv.appendChild(divMaterias);
+    } else {
+      const texto = `${names[idx]}: ${element.value}`;
+      inputDiv.innerText = texto;
+      parentDiv.appendChild(inputDiv);
+    }
+  });
+}
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const form = document.querySelector('#evaluation-form');
+  const name = document.querySelector('#input-name');
+  const lastName = document.querySelector('#input-lastname');
+  const fullName = `${name.value} ${lastName.value}`;
+  const email = document.querySelector('#input-email');
+  const house = document.querySelector('#house');
+  const family = document.querySelector('input[name="family"]:checked');
+  const subject = document.querySelectorAll('input[name="conteudo"]:checked');
+  const rate = document.querySelector('input[name="rate"]:checked');
+  const obs = document.querySelector('#textarea');
+  const array = [fullName, email, house.options[house.selectedIndex], family, subject, rate, obs];
+  const names = ['Nome', 'Email', 'Casa', 'Família', 'Matérias', 'Avaliação', 'Observações'];
+  form.innerHTML = '';
+  createDiv();
+  constructorDiv(array, names, form);
+});
+
 window.onload = () => {
   trybeRating();
 };
