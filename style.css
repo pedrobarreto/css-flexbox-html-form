@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+}
+
+header {
+  padding: 15px 10px;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -6,17 +14,24 @@
   align-items: center;
 }
 
-.header h1 {
-  order: 2;
+.header img {
+  width: 60px;
 }
 
 .trybewarts-login {
   display: flex;
-  order: 3;
 }
 
-form {
+input {
+  margin: 5px;
+}
+
+main form {
   min-width: 675px;
+}
+
+.header form {
+  width: 400px;
 }
 
 /* requisito 7 */
@@ -35,7 +50,7 @@ form {
 
 footer {
   display: flex;
-  text-align: center;
+  justify-content: center;
   padding: 50px 0;
   background-color: black;
   width: 100%;

@@ -13,12 +13,12 @@
     <img src="images/trybewarts-header-logo.svg" class='trybewarts-header-logo'>
     <h1 id='trybewarts-header-title'>Trybewarts</h1>
     <form class="trybewarts-login">
-      <input class="login-input" type="login" name="login" placeholder="Login" >
-      <input class="pwd-input" type="password" name="pwd" placeholder="Senha" >
-      <button class="submit-button" type="submit">Logar</button>
+      <input class="login-input form-control" type="login" name="login" placeholder="Login" >
+      <input class="pwd-input form-control mx-1" type="password" name="pwd" placeholder="Senha" >
+      <button class="submit-button btn btn-dark" type="submit">Logar</button>
     </form>
   </header>
-  <main class="d-flex">
+  <main class="d-flex align-items-center justify-content-around">
     <form action="#" method="GET" id="evaluation-form" class="d-flex flex-column">
       <!-- requisito 8, 10 -->
       <div class="d-flex">
@@ -50,23 +50,23 @@
       <!-- requisito 13 -->
       <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
       <div class="d-flex">
-        <label for="HoFs">
-          <input type="checkbox" name="conteudo" value="HoFs" class="subject" id="HoFs"> HoFs
+        <label class="form-check-label" for="HoFs">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="HoFs" class="subject" id="HoFs"> HoFs
         </label>
-        <label for="Jest">
-          <input type="checkbox" name="conteudo" value="Jest" class="subject" id="Jest"> Jest
+        <label class="form-check-label" for="Jest">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="Jest" class="subject" id="Jest"> Jest
         </label>
-        <label for="Promises">
-          <input type="checkbox" name="conteudo" value="Promises" class="subject" id="Promises"> Promises
+        <label class="form-check-label" for="Promises">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="Promises" class="subject" id="Promises"> Promises
         </label>
-        <label for="React">
-          <input type="checkbox" name="conteudo" value="React" class="subject" id="React"> React
+        <label class="form-check-label" for="React">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="React" class="subject" id="React"> React
         </label>
-        <label for="SQL">
-          <input type="checkbox" name="conteudo" value="SQL" class="subject" id="SQL"> SQL
+        <label class="form-check-label" for="SQL">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="SQL" class="subject" id="SQL"> SQL
         </label>
-        <label for="Python">
-          <input type="checkbox" name="conteudo" value="Python" class="subject" id="Python"> Python
+        <label class="form-check-label" for="Python">
+          <input class="form-check-input" type="checkbox" name="conteudo" value="Python" class="subject" id="Python"> Python
         </label>
       </div>
         <!-- requisito 14 -->
@@ -80,8 +80,8 @@
         <textarea id="textarea" name="commentArea" maxlength="500"></textarea>
         <p id="counter">500</p>
        <!-- requisito 16 -->
-    <label for="agreement" id="label-infos">
-      <input type="checkbox" name="" id="agreement"> Você concorda com o uso das informações acima?
+    <label for="agreement" id="label-infos" class="form-check-label">
+      <input type="checkbox"class="form-check-input" name="agreement" id="agreement"> Você concorda com o uso das informações acima?
     </label>
     <!-- requisito 17 -->
     <button type="submit" id="submit-btn" disabled>Enviar</button>
