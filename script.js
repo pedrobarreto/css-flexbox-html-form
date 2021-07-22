@@ -35,6 +35,14 @@ agree.addEventListener('change', () => {
   }
 });
 
+// requisito 20
+const textArea = document.querySelector('textarea');
+const counter = document.querySelector('#counter');
+textArea.addEventListener('input', () => {
+  const contador = 500 - textArea.value.length;
+  counter.innerText = contador;
+});
+
 window.onload = () => {
   trybeRating();
 };
