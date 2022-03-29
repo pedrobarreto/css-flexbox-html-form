@@ -3,3 +3,13 @@ node_modules/
 cypress/reports
 cypress/screenshots
 .DS_Store
+/cypress
+/.trybe
+/.github
+reporter.json
+package.json
+package-lock.json
+cypress.json
+.stylelintignore
+.stylelintrc.json
+feedback.md
